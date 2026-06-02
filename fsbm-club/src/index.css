@@ -1,10 +1,181 @@
-
-
 @import "tailwindcss";
 
+@theme {
+  --color-surface-variant: #333535;
+  --color-on-secondary-fixed-variant: #534600;
+  --color-primary-container: #050505;
+  --color-surface-bright: #37393a;
+  --color-surface-tint: #c9c6c5;
+  --color-on-tertiary-fixed: #1c1b1b;
+  --color-primary-fixed: #e5e2e1;
+  --color-on-surface-variant: #c4c7c7;
+  --color-background: #121414;
+  --color-on-tertiary: #313030;
+  --color-primary-fixed-dim: #c9c6c5;
+  --color-on-error: #690005;
+  --color-inverse-on-surface: #2f3131;
+  --color-on-surface: #e2e2e2;
+  --color-on-secondary: #393000;
+  --color-secondary-fixed: #ffe259;
+  --color-tertiary-fixed: #e5e2e1;
+  --color-on-tertiary-fixed-variant: #474646;
+  --color-tertiary-fixed-dim: #c8c6c5;
+  --color-surface-container-high: #282a2b;
+  --color-on-primary: #313030;
+  --color-on-primary-fixed-variant: #474646;
+  --color-secondary: #ffe259;
+  --color-tertiary-container: #050505;
+  --color-surface-container-highest: #333535;
+  --color-surface: #121414;
+  --color-on-primary-fixed: #1c1b1b;
+  --color-surface-container-low: #1a1c1c;
+  --color-outline-variant: #444748;
+  --color-error-container: #93000a;
+  --color-on-secondary-container: #605200;
+  --color-on-background: #e2e2e2;
+  --color-secondary-fixed-dim: #e5c500;
+  --color-primary: #c9c6c5;
+  --color-on-tertiary-container: #787777;
+  --color-surface-dim: #121414;
+  --color-outline: #8e9192;
+  --color-error: #ffb4ab;
+  --color-on-primary-container: #797777;
+  --color-surface-container: #1e2020;
+  --color-inverse-surface: #e2e2e2;
+  --color-tertiary: #c8c6c5;
+  --color-on-error-container: #ffdad6;
+  --color-on-secondary-fixed: #211b00;
+  --color-secondary-container: #e5c500;
+  --color-inverse-primary: #5f5e5e;
+  --color-surface-container-lowest: #0c0f0f;
+
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1440px;
+  --spacing-unit: 4px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 64px;
+
+  --font-display-xl: Anton, sans-serif;
+  --font-display-lg: Anton, sans-serif;
+  --font-headline-lg: Anton, sans-serif;
+  --font-display-lg-mobile: Anton, sans-serif;
+  --font-body-md: Inter, sans-serif;
+  --font-body-lg: Inter, sans-serif;
+  --font-metadata: JetBrains Mono, monospace;
+  --font-display-md: Anton, sans-serif;
+
+  --font-size-display-xl: 120px;
+  --font-size-display-xl--line-height: 110px;
+  --font-size-display-xl--letter-spacing: -0.04em;
+  --font-size-display-xl--font-weight: 400;
+
+  --font-size-display-lg: 80px;
+  --font-size-display-lg--line-height: 80px;
+  --font-size-display-lg--letter-spacing: -0.02em;
+  --font-size-display-lg--font-weight: 400;
+
+  --font-size-headline-lg: 32px;
+  --font-size-headline-lg--line-height: 40px;
+  --font-size-headline-lg--letter-spacing: 0.02em;
+  --font-size-headline-lg--font-weight: 400;
+
+  --font-size-display-lg-mobile: 56px;
+  --font-size-display-lg-mobile--line-height: 56px;
+  --font-size-display-lg-mobile--font-weight: 400;
+
+  --font-size-body-md: 16px;
+  --font-size-body-md--line-height: 24px;
+  --font-size-body-md--font-weight: 400;
+
+  --font-size-body-lg: 18px;
+  --font-size-body-lg--line-height: 28px;
+  --font-size-body-lg--font-weight: 400;
+
+  --font-size-metadata: 12px;
+  --font-size-metadata--line-height: 16px;
+  --font-size-metadata--letter-spacing: 0.1em;
+  --font-size-metadata--font-weight: 500;
+
+  --font-size-display-md: 48px;
+  --font-size-display-md--line-height: 52px;
+  --font-size-display-md--letter-spacing: 0em;
+  --font-size-display-md--font-weight: 400;
+}
+
 @layer base {
-  body {
-    background-color: #f8fafc;
-    color: #1e293b;
+  html, body, #root {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    overflow: visible;
   }
+}
+
+.noise-bg {
+    position: relative;
+}
+.noise-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZUZpbHRlciI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI25vaXNlRmlsdGVyKSIvPjwvc3ZnPg==');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 10;
+}
+.noise-hero::before {
+     content: "";
+     position: absolute;
+     top: 0; left: 0; right: 0; bottom: 0;
+     background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gPGZpbHRlciBpZD0ibm9pc2VGaWx0ZXIiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjgiIG51bU9jdGF2ZXM9IjQiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI25vaXNlRmlsdGVyKSIvPjwvc3ZnPg==');
+     opacity: 0.15;
+     pointer-events: none;
+     z-index: 20;
+     mix-blend-mode: overlay;
+ }
+.bw-image {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.bw-image:hover {
+    filter: grayscale(0%);
+}
+
+/* Cinematic Hero Animations */
+@keyframes lensBreathing {
+    0% { transform: scale(1); opacity: 1; }
+    45% { transform: scale(1.05); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0; }
+    95% { transform: scale(1); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes reelSpin {
+    0% { transform: scale(1.05) rotate(0deg); opacity: 0; }
+    45% { transform: scale(1.05) rotate(0deg); opacity: 0; }
+    50% { transform: scale(1) rotate(2deg); opacity: 1; }
+    95% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+    100% { transform: scale(1.05) rotate(0deg); opacity: 0; }
+}
+
+.cinematic-lens {
+    animation: lensBreathing 16s ease-in-out infinite;
+}
+
+.cinematic-reel {
+    animation: reelSpin 16s ease-in-out infinite;
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cinematic-lens, .cinematic-reel {
+        animation: none;
+    }
+    .cinematic-reel {
+        display: none;
+    }
 }
