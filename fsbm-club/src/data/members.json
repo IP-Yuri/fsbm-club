@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Achraf Rechag",
+    "role": "Social Media Manager",
+    "img": "/team/achraf_rechag.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Abdelhamid Aitbouhmadi",
+    "role": "Responsable Communication",
+    "img": "/team/abdelhamid_aitbouhmadi.png"
+  },
+  {
+    "id": 3,
+    "name": "Anwar Slimani",
+    "role": "Président",
+    "img": "/team/anwar_slimani.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Hajar Maafou",
+    "role": "Vice-Présidente",
+    "img": "/team/hajar_maafou.png"
+  },
+  {
+    "id": 5,
+    "name": "Kautar Fllafi",
+    "role": "Responsable Organisation",
+    "img": "/team/kautar_fllafi.png"
+  },
+  {
+    "id": 6,
+    "name": "Tabit Soufiane",
+    "role": "Directeur de la Photographie",
+    "img": "/team/tabit_soufiane.png"
+  },
+  {
+    "id": 7,
+    "name": "Soufiane Haoudi",
+    "role": "Responsable Sponsoring",
+    "img": "/team/soufiane_haoudi.png"
+  }
+]
